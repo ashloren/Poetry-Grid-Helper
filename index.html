@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Playfair Display', serif;
-    background-color: #f5f5f5;
+    background-color: #fff;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #fff;
+    background-color: #f5f5f5;
     padding: 10px 20px;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
@@ -65,7 +65,7 @@ main {
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+
     text-align: center;
 }
 
@@ -83,7 +83,7 @@ main {
 
 .cta-button {
     background-color: #FFD700;
-    color: #fff;
+    color: #000;
     border: none;
     padding: 15px 30px;
     font-size: 1em;
@@ -135,7 +135,7 @@ footer p {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info Product</title>
+    <title>Poem Grid Helper</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -146,19 +146,19 @@ footer p {
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Development</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="product-info" id="home">
-            <h2>Discover the Secrets to Success</h2>
+            <h2>Can You Write a Poem That Reads The Same Both Horizontally and Vertically?</h2>
 			
 			
 <style type="text/css">
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,6 +247,8 @@ td.filled {
 
 
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
 <script type="text/javascript">
 let currentRow = 0;
 
@@ -310,6 +312,11 @@ function fillCell(row, col, word) {
 
 
 </script>
+
+<script type="text/javascript">
+
+
+</script>
 <script src="https://unpkg.com/compromise"></script>
 
 <!DOCTYPE html>
@@ -317,7 +324,7 @@ function fillCell(row, col, word) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Grid</title>
+    <title>Poetry Grid Helper</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -325,19 +332,19 @@ function fillCell(row, col, word) {
         <h1>Grid Poem Helper</h1>
         <p>Enter a six-word sentence to fill the grid.</p>
         <input type="text" id="wordInput" placeholder="Type a six-word sentence">
-        <table id="wordGrid"></table>
+        <div id="capture"><table id="wordGrid"></table></div>
         <div id="statusMessage"></div>
     </div>
-    <script src="script.js"></script>
+
 </body>
 </html>
 
-            <p>Our comprehensive guide offers practical tips and strategies to help you achieve your goals and unlock your full potential. Get started today and transform your life!</p>
-            <button class="cta-button">Buy Now</button>
+            <p>The original poem that this was inspired by is attributed to Lewis Carroll. I found it <a href="https://www.futilitycloset.com/2009/05/18/7669/">here</a>. <br><center><img src="https://raw.githubusercontent.com/ashloren/Poetry-Grid-Helper/main/2009-05-18-square-stanza.png"></p></center>
+            <button id="exportButton" class="cta-button">Share Your Poem!</button>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Info Product. All rights reserved.</p>
+        <p>&copy; 2024 Poetry Grid Helper. All rights reserved.</p>
     </footer>
 </body>
 </html>
