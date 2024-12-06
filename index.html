@@ -110,72 +110,7 @@ footer p {
     font-size: 0.9em;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .product-info {
-        padding: 20px;
-    }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-links li {
-        display: block;
-    }
-}
-
-.slideshow-container {
-    width: 644px;
-    position: relative;
-    margin: auto;
-}
-
-.mySlides {
-    display: none;
-}
-
-img {
-    width: 644px;
-    height: 205px;
-    object-fit: cover;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
 
 
 
@@ -204,8 +139,8 @@ img {
     </header>
     <main>
         <section class="product-info" id="home">
-            <h2>Can You Write a Poem That Reads The Same Both Horizontally and Vertically?</h2>
-			
+            <h2>Can You Write a Poem That Reads The Same Both Horizontally and Vertically?</h2>    <img src="https://raw.githubusercontent.com/ashloren/Poetry-Grid-Helper/refs/heads/main/ezgif.com-animated-gif-maker.gif"><h3>It's *Harder* Than it Looks...</h3>
+
 			
 <style type="text/css">
 body {
@@ -296,26 +231,7 @@ td.filled {
 }
 
 
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
 
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Responsive */
-@media only screen and (max-width: 644px) {
-    .prev, .next, .text {font-size: 11px}
-}
 
 
 </style>
@@ -448,47 +364,7 @@ function fillCell(row, col, word) {
      <div id="table-container">  <table id="wordGrid"></table></div>
         <div id="statusMessage"></div>
     </div>
-    <div class="slideshow-container">
 
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 4</div>
-            <img src="https://raw.githubusercontent.com/ashloren/shop-sticky/main/square-stanza-poem.gif" style="width:100%">
-        
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 4</div>
-            <img src="https://raw.githubusercontent.com/ashloren/shop-sticky/main/second-line.gif" style="width:100%">
-       
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 4</div>
-            <img src="https://raw.githubusercontent.com/ashloren/shop-sticky/main/third-line.gif" style="width:100%">
- 
-        </div>
-		
-		
-		
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
-            <img src="https://raw.githubusercontent.com/ashloren/shop-sticky/main/final-lines.gif" style="width:100%">
-
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-		   <span class="dot" onclick="currentSlide(4)"></span> 
-    </div>
 </body>
 </html>
 
