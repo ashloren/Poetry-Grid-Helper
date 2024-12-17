@@ -110,6 +110,13 @@
             font-size: 18px;
             color: #2c3e50;
         }
+        
+        #table-container {
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
 
         table {
             width: 100%;
@@ -129,12 +136,16 @@
             transition: transform 0.3s ease, opacity 0.3s ease;
             opacity: 0;
             transform: scale(0.8);
+            white-space: nowrap;
+    overflow: visible;
+    text-align: center;
         }
 
         td.filled {
             opacity: 1;
             transform: scale(1);
         }
+        td.unique {background:cyan;}
 
         @media (max-width: 600px) {
             td {
@@ -142,6 +153,8 @@
                 padding: 5px;
             }
         }
+        
+        a {text-decoration:none;}
     </style>
 </head>
 <body>
@@ -151,15 +164,17 @@
     <main>
         <section class="product-info">
             <h2>Can You Write a Poem That Reads The Same Both Horizontally and Vertically?</h2>
-            <img src="https://raw.githubusercontent.com/ashloren/Poetry-Grid-Helper/refs/heads/main/ezgif.com-animated-gif-maker.gif" alt="Example of poetry grid">
+           
             <h3>It's <em>Harder</em> Than it Looks...</h3>
+            
+        <p><details><summary><mark> Click here to read one by Louis Carroll</mark></summary><img src="square-stanza.png"><p>Credit for this find goes to <em><a href="https://www.futilitycloset.com/2009/05/18/7669/">Futility Closet</a></em>!</p></details></p><hr>
 
             <div class="container">
                 <p>Enter a six-word sentence to fill the grid.</p>
                 <input type="text" id="wordInput" placeholder="Type a six-word sentence">
                 <div id="table-container">
                     <table id="wordGrid"></table>
-                </div>
+                </div><p>Still struggling to write one that makes sense?</p>
                 <div id="statusMessage"></div>
                 <button id="download" class="cta-button">Save Your Poem!</button>
             </div>
@@ -228,12 +243,17 @@
             });
 
             document.getElementById("download").addEventListener("click", () => {
-                html2canvas(document.getElementById("table-container")).then((canvas) => {
-                    const link = document.createElement("a");
-                    link.download = "grid-poem.png";
-                    link.href = canvas.toDataURL("image/png");
-                    link.click();
-                });
+                html2canvas(document.getElementById("table-container"), {
+    scale: 2, // Higher scale improves clarity
+    useCORS: true,
+    scrollY: -window.scrollY, // Captures the entire container even if overflowed
+}).then((canvas) => {
+    const link = document.createElement("a");
+    link.download = "grid-poem.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+});
+
             });
         });
     </script>
